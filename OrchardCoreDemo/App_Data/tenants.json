@@ -1,5 +1,9 @@
 {
   "Default": {
     "State": "Running"
+  },
+  "Blog": {
+    "RequestUrlPrefix": "blog",
+    "State": "Running"
   }
 }
