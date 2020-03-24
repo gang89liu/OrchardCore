@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="{{ Culture.Name }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+
+        {% render_section "HeadMeta", required: false %}
+
+        <title>{% page_title Site.SiteName %}</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/TheCreativeTheme/css/styles.css" rel="stylesheet" />
+
+        {% resources type: "Meta" %}
+        {% resources type: "HeadScript" %}
+        {% resources type: "HeadLink" %}
+        {% resources type: "Stylesheet" %}
+
+    </head>
+    <body id="page-top" dir="{{ Culture.Dir }}"*>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                 {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
+            </div>
+        </nav>
+
+   {% render_section "Header", required: false %}
+    <div class="container" id="main">
+		{% render_section "Messages", required: false %}
+        {% render_section "Content" %}
+    </div>
+    {% render_section "Footer", required: false %}
+        <!-- Bootstrap core JS-->
+
+        <!-- Third party plugin JS-->
+
+         <!-- Bootstrap core JavaScript -->
+            {% script name:"thecreativetheme-vendor-jquery", at:"Foot" %}    
+            {% script name:"thecreativetheme-vendor-bootstrap-bundle", at:"Foot" %}
+
+            <!-- Plugin JavaScript -->
+            {% script name:"thecreativetheme-vendor-jquery.easing", at:"Foot" %}    
+            {% script name:"thecreativetheme-vendor-jquery.popup", at:"Foot" %}    
+        <!-- Core theme JS-->
+        <!-- Custom scripts for this template -->
+        {% script src:"~/TheCreativeTheme/js/scripts.js", debug_src:"~/TheCreativeTheme/js/scripts.js", at:"Foot" %}
+        {% resources type: "FootScript" %}
+    </body>
+</html>

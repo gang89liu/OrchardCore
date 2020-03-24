@@ -5,5 +5,9 @@
   "Blog": {
     "RequestUrlPrefix": "blog",
     "State": "Running"
+  },
+  "creative": {
+    "RequestUrlPrefix": "creative",
+    "State": "Running"
   }
 }
